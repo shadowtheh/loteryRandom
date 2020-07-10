@@ -1,0 +1,42 @@
+package sample;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    //Лотерея
+    public static int iD() {
+        return (int) (Math.random() * 10);
+    }
+
+
+    public static void main(String[] args) {
+
+
+        Scanner productName = new Scanner(System.in);
+
+        int pN;
+        int x = 0;
+        System.out.println("Проверь свои шансы. Введи цифру билета ");
+
+        while (productName.hasNextInt()) {
+
+            pN = productName.nextInt();
+
+            for (int i = 0; i < 1; i++) {
+                x = iD();
+                System.out.println("Число билета: " + x);
+
+                if(pN == x) {
+                    System.out.println("Поздравляю!");
+                }
+                else
+                    System.out.println("Мне очень жаль");
+                }
+
+
+        }
+    }
+}
+
